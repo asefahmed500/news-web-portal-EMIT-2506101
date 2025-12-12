@@ -1,0 +1,29 @@
+{
+  "name": "newsweb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "api": "json-server --watch db.json --port 3000",
+    "dev:all": "powershell -NoProfile -Command \"Start-Process powershell -ArgumentList ' -NoProfile -Command npm run api '; npm run dev\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "next": "16.0.10",
+    "react": "19.2.1",
+    "react-dom": "19.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.10",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
