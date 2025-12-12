@@ -2,21 +2,48 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+This project uses:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js app (frontend) on `http://localhost:3001`
+- JSON-Server (mock backend) on `http://localhost:3000`
+
+### 1) Install
+
+```powershell
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2) Configure Environment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+copy .env.example .env.local
+```
+
+Edit `.env.local` if needed (defaults to `http://localhost:3000` for API).
+
+### 3) Run JSON-Server (API)
+
+```powershell
+npm run api
+```
+
+### 4) Run Next.js (Frontend)
+
+```powershell
+npm run dev
+```
+
+Open `http://localhost:3001`.
+
+App pages:
+
+- `http://localhost:3001/login`
+- `http://localhost:3001/news`
+
+Notes:
+
+- Login is simulated using localStorage.
+- Only the author can edit/delete their own news.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
