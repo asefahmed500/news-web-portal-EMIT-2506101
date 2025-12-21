@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "api": "json-server --watch db.json --port 3000",
-    "dev:all": "powershell -NoProfile -Command \"Start-Process powershell -ArgumentList ' -NoProfile -Command npm run api '; npm run dev\"",
+    "api": "node node_modules/json-server/lib/bin.js db.json --port 3000",
+    "dev:all": "start cmd /c \"node node_modules/json-server/lib/bin.js db.json --port 3000\" && next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
